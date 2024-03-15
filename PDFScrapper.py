@@ -249,7 +249,6 @@ def get_current_directory():
 
 currentDirectory = get_current_directory()
 files = read_files_in_directory(currentDirectory + "\\inputs")
-pages = convert_pdf_to_txt('C:\\Users\\jacob\\PycharmProjects\\PDFScrapper\\inputs\\1.1 - CalOES.pdf')
 for file in files:
     with open (currentDirectory + "\\outputs\\" + file[:-4] + ".txt", "w") as text_file:
         pages = convert_pdf_to_txt(currentDirectory + "\\inputs\\" + file)
